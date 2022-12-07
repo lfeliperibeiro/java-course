@@ -1,14 +1,14 @@
 public class BankTest {
     public static void main(String[] args) {
         Client felipe = new Client();
-        felipe.name = "Felipe Ribeiro";
-        felipe.cpf = "000.000.000-00";
-        felipe.profession = "Software Develop";
+        felipe.setName( "Felipe Ribeiro");
+        felipe.setCpf("000.000.000-00");
+        felipe.setProfession("Software Develop");
 
         Account felipeAccount = new Account();
         felipeAccount.deposit(100);
-        felipeAccount.owner = felipe;
-        System.out.println( felipeAccount.owner.name);
-        System.out.println( felipeAccount.owner);
+        felipeAccount.setOwner(felipe);
+        System.out.println(felipeAccount.getOwner().getName());
+        System.out.println( felipeAccount.getOwner());
     }
 }

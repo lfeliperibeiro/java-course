@@ -1,9 +1,11 @@
 public class AccountNoClient {
     public static void main(String[] args) {
-        Account noClient = new Account();
-        noClient.owner = new Client();
-        noClient.owner.name = "Giovanna";
+        Account account = new Account();
 
-        System.out.println( noClient.owner.name);
+        Client noClient = new Client();
+        account.setOwner(noClient);
+        noClient.setName("Giovanna");
+
+        System.out.println(account.getOwner().getName());
     }
 }

@@ -1,12 +1,13 @@
 public class Method {
     public static void main(String[] args) {
         Account account = new Account();
-        account.balance = 100;
-        account.deposit(50);
-        System.out.println(account.balance);
+        account.deposit(150);
+        System.out.println(account.getBalance());
+
+        Client client = new Client();
 
         boolean canWithdraw = account.withdraw(25);
-        System.out.println(account.balance);
+        System.out.println(account.getBalance());
         System.out.println(canWithdraw);
 
         Account otherAccount = new Account();
@@ -19,11 +20,12 @@ public class Method {
        } else{
            System.out.println("faltou saldo");
        }
-        System.out.println(otherAccount.balance);
-        System.out.println(account.balance);
+        System.out.println(otherAccount.getBalance());
+        System.out.println(account.getBalance());
 
-        account.owner.name = "Felipe Ribeiro";
+        account.setOwner(client) ;
+        client.setName("Felipe Ribeiro");
 
-        System.out.println(account.owner.name);
+        System.out.println(client.getName());
     }
 }
