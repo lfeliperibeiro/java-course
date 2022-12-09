@@ -5,7 +5,7 @@ public class BankTest {
         felipe.setCpf("000.000.000-00");
         felipe.setProfession("Software Develop");
 
-        Account felipeAccount = new Account();
+        Account felipeAccount = new Account(1, 20);
         felipeAccount.deposit(100);
         felipeAccount.setOwner(felipe);
         System.out.println(felipeAccount.getOwner().getName());

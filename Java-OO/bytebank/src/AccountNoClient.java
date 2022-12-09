@@ -1,6 +1,6 @@
 public class AccountNoClient {
     public static void main(String[] args) {
-        Account account = new Account();
+        Account account = new Account(13, 400);
 
         Client noClient = new Client();
         account.setOwner(noClient);

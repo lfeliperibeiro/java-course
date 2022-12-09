@@ -1,6 +1,6 @@
 public class Method {
     public static void main(String[] args) {
-        Account account = new Account();
+        Account account = new Account(10, 100);
         account.deposit(150);
         System.out.println(account.getBalance());
 
@@ -10,7 +10,7 @@ public class Method {
         System.out.println(account.getBalance());
         System.out.println(canWithdraw);
 
-        Account otherAccount = new Account();
+        Account otherAccount = new Account(12, 101);
         otherAccount.deposit(1000);
 
         boolean transferSuccess =  otherAccount.transfer(300, account);
